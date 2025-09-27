@@ -1,17 +1,18 @@
-import { Link } from "expo-router";
+import { Link, Stack } from "expo-router";
 import { StyleSheet, Text, View } from "react-native";
 
-export default function Index() {
+
+export default function NotFound() {
   return (
-    <View
-      style={styles.container}
-    >
-      <Text style={styles.text}>Home screen</Text>
-      <Link href="/camera" style={styles.button}>Open Camera</Link>
-    </View>
+    <>
+      <Stack.Screen options={{ title: "Not Found" }} />
+      <View style={styles.container}>
+        <Text style={styles.text}>This screen does not exist.</Text>
+        <Link href="/" style={styles.button}>Go back to Home</Link>
+      </View>
+    </>
   );
 }
-
 
 const styles = StyleSheet.create({
   container: {
@@ -31,3 +32,4 @@ const styles = StyleSheet.create({
   }
 }
 )
+
